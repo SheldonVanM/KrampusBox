@@ -4,7 +4,15 @@
 // Definitions
 #define PIN_D2 (2)
 #define PIN_D3 (3)
+// For sounds
 #define PIN_D4 (4)
+#define PIN_D5 (5)
+#define PIN_D6 (6)
+#define PIN_D7 (7)
+#define PIN_D8 (8)
+#define PIN_D9 (9)
+// For
+#define PIN_D12 (12)
 #define TIMEOUT (300)
 
 void Microcontroller::setupMicrocontroller()
@@ -39,7 +47,7 @@ void Microcontroller::activateSound(bool activate)
 
 uint8_t Microcontroller::getRingLedPin()
 {
-    return PIN_D4;
+    return PIN_D12;
 }
 
 void Microcontroller::delayMicroController(unsigned long ms)

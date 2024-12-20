@@ -11,6 +11,8 @@ protected:
     LedRing ring;
     int previous_sensor_input;
     int current_sensor_input;
+    uint8_t LED_BRIGHTNESS = 150;
+    bool triggerPreviouslyEngaged;
 
 public:
     /**/
@@ -23,7 +25,10 @@ public:
     bool isTriggerActivated();
 
     /**/
-    void manageLighting();
+    bool isTriggerDisengaged();
+
+    /**/
+    void manageLighting(bool turnOn);
 };
 
 #endif

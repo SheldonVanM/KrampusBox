@@ -28,3 +28,23 @@ void LedRing::changeColor(uint8_t red, uint8_t green, uint8_t blue)
 {
     this->changeColor(this->strip.Color(red, green, blue));
 }
+
+void LedRing::turnRingOn(uint32_t color)
+{
+    for (uint16_t pixel = 0; pixel < strip.numPixels(); pixel++)
+    {
+        strip.setPixelColor(pixel, color);
+    }
+    strip.show();
+}
+
+void LedRing::turnRingOn(uint8_t red, uint8_t green, uint8_t blue)
+{
+    this->turnRingOn(strip.Color(red, green, blue));
+}
+
+void LedRing::clear()
+{
+    strip.clear();
+    strip.show();
+}

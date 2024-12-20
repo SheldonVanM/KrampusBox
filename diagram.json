@@ -9,7 +9,7 @@
       "id": "btn1",
       "top": 15.8,
       "left": 192,
-      "attrs": { "color": "green" }
+      "attrs": { "color": "green", "bounce": "1" }
     },
     {
       "type": "wokwi-resistor",
@@ -42,7 +42,7 @@
     [ "btn1:1.l", "nano:2", "blue", [ "h-9.6", "v-48", "h-67.2" ] ],
     [ "ring1:GND", "nano:GND.1", "black", [ "v144", "h259.2" ] ],
     [ "ring1:VCC", "nano:VIN", "red", [ "v153.6", "h259.2" ] ],
-    [ "ring1:DIN", "nano:4", "green", [ "v19.2", "h192" ] ]
+    [ "nano:12", "ring1:DIN", "green", [ "v-24", "h-115.7" ] ]
   ],
   "dependencies": {}
 }
