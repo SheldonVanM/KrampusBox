@@ -24,6 +24,13 @@
       "top": 6,
       "left": 311.4,
       "attrs": { "color": "red", "flip": "1" }
+    },
+    {
+      "type": "wokwi-led-ring",
+      "id": "ring1",
+      "top": -191.36,
+      "left": -171.61,
+      "attrs": { "pixels": "16" }
     }
   ],
   "connections": [
@@ -32,7 +39,7 @@
     [ "btn1:1.r", "r1:2", "green", [ "h9.8", "v-96" ] ],
     [ "led1:A", "nano:VIN", "red", [ "v57.6", "h-172.3" ] ],
     [ "led1:C", "nano:3", "orange", [ "v19.2", "h18.8", "v-144", "h-249.6" ] ],
-    [ "btn1:2.l", "nano:2", "blue", [ "h-9.6", "v-67", "h-67.2" ] ]
+    [ "btn1:1.l", "nano:2", "blue", [ "h-9.6", "v-48", "h-67.2" ] ]
   ],
   "dependencies": {}
 }
