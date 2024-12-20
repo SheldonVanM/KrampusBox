@@ -3,12 +3,14 @@
 
 #include "LedRing.h"
 #include "Microcontroller.h"
+#include "Audiocontroller.h"
 
 class Mediator
 {
 protected:
     Microcontroller microcontroller;
     LedRing ring;
+    Audiocontroller audiocontroller;
     int previous_sensor_input;
     int current_sensor_input;
     uint8_t LED_BRIGHTNESS = 150;

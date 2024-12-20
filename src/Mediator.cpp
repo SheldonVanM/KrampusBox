@@ -22,23 +22,25 @@ bool Mediator::isTriggerDisengaged()
 
 void Mediator::manageReedSensor()
 {
-    microcontroller.activateSound(false);
+    // microcontroller.activateSound(false, 0);
+    audiocontroller.turnOffSound();
     this->current_sensor_input = microcontroller.getSensorInput();
+    // Turn lights ON when the lid is open
     if (this->isTriggerActivated())
     {
-        microcontroller.activateSound(true);
+        // microcontroller.activateSound(true, 0);
+        audiocontroller.playRandomSound();
         manageLighting(true);
         this->triggerPreviouslyEngaged = true;
     }
     microcontroller.delayMicroController(300);
+    // Turn lights OFF when the lid is closed
     if (this->isTriggerDisengaged())
     {
         manageLighting(false);
         this->triggerPreviouslyEngaged = false;
     }
     this->previous_sensor_input = this->current_sensor_input;
-    // Turn the LEDs off again
-    // manageLighting(false);
 }
 
 void Mediator::manageLighting(bool turnOn)

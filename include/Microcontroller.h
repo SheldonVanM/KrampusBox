@@ -17,9 +17,23 @@ public:
 
     int getSensorInput();
 
-    void activateSound(bool activate);
+    void writePin(bool activate, int pin);
 
     void delayMicroController(unsigned long ms);
+
+    int getSoundOne();
+
+    int getSoundTwo();
+
+    int getSoundThree();
+
+    int getSoundFour();
+
+    int getSoundFive();
+
+    int getSoundSix();
+
+    int getSoundSeven();
 };
 
 #endif
