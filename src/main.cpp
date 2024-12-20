@@ -1,19 +1,15 @@
 #include <Arduino.h>
-#include "Microcontroller.h"
+#include "Mediator.h"
 
-Microcontroller microcontroller;
+Mediator mediator;
 
 void setup()
 {
-  microcontroller.setupMicrocontroller();
+  mediator.setup();
 }
 
 void loop()
 {
-  // put your main code here, to run repeatedly:
-}
-
-int getRingLedPin()
-{
-  return PIN_D4;
+  // Handle main code logic
+  mediator.manageReedSensor();
 }

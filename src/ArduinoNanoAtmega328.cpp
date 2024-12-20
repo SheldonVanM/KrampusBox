@@ -20,26 +20,21 @@ void Microcontroller::setupMicrocontroller()
     digitalWrite(PIN_D3, HIGH);
 }
 
-void Microcontroller::manageSensor()
+int Microcontroller::getSensorInput()
 {
-    // Read input from sensor
-    int current_sensor_input = digitalRead(PIN_D2);
-    if (current_sensor_input == LOW && previous_sensor_input == HIGH)
+    return digitalRead(PIN_D2);
+}
+
+void Microcontroller::activateSound(bool activate)
+{
+    if (activate)
     {
-        Serial.println("Door has been opened!");
         digitalWrite(PIN_D3, LOW);
     }
-
-    previous_sensor_input = current_sensor_input;
-
-    Serial.print("CURRENT SENSOR INPUT: ");
-    Serial.println(current_sensor_input);
-
-    Serial.print("PREVIOUS SENSOR INPUT: ");
-    Serial.println(previous_sensor_input);
-
-    delay(TIMEOUT); // Delay the execution loop for 100ms
-    digitalWrite(PIN_D3, HIGH);
+    else
+    {
+        digitalWrite(PIN_D3, HIGH);
+    }
 }
 
 uint8_t Microcontroller::getRingLedPin()

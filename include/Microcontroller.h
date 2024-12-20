@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #ifndef __Microcontroller_H_INCLUDED
 #define __Microcontroller_H_INCLUDED
 
@@ -16,7 +15,9 @@ public:
 
     uint8_t getRingLedPin();
 
-    void manageSensor();
+    int getSensorInput();
+
+    void activateSound(bool activate);
 
     void delayMicroController(unsigned long ms);
 };

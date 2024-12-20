@@ -35,11 +35,14 @@
   ],
   "connections": [
     [ "nano:VIN", "btn1:2.r", "red", [ "v24", "h124.3", "v-48" ] ],
-    [ "r1:1", "nano:GND.2", "green", [ "v0", "h-19.2" ] ],
-    [ "btn1:1.r", "r1:2", "green", [ "h9.8", "v-96" ] ],
+    [ "r1:1", "nano:GND.2", "black", [ "v0", "h-19.2" ] ],
+    [ "btn1:1.r", "r1:2", "black", [ "h9.8", "v-96" ] ],
     [ "led1:A", "nano:VIN", "red", [ "v57.6", "h-172.3" ] ],
     [ "led1:C", "nano:3", "orange", [ "v19.2", "h18.8", "v-144", "h-249.6" ] ],
-    [ "btn1:1.l", "nano:2", "blue", [ "h-9.6", "v-48", "h-67.2" ] ]
+    [ "btn1:1.l", "nano:2", "blue", [ "h-9.6", "v-48", "h-67.2" ] ],
+    [ "ring1:GND", "nano:GND.1", "black", [ "v144", "h259.2" ] ],
+    [ "ring1:VCC", "nano:VIN", "red", [ "v153.6", "h259.2" ] ],
+    [ "ring1:DIN", "nano:4", "green", [ "v19.2", "h192" ] ]
   ],
   "dependencies": {}
 }
