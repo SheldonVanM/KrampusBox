@@ -37,6 +37,7 @@ void Mediator::manageReedSensor()
     // Turn lights OFF when the lid is closed
     if (this->isTriggerDisengaged())
     {
+        audiocontroller.turnOffSound();
         manageLighting(false);
         this->triggerPreviouslyEngaged = false;
     }

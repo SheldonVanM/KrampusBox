@@ -13,7 +13,7 @@ protected:
     Audiocontroller audiocontroller;
     int previous_sensor_input;
     int current_sensor_input;
-    uint8_t LED_BRIGHTNESS = 150;
+    uint8_t LED_BRIGHTNESS = 200;
     bool triggerPreviouslyEngaged;
 
 public:
